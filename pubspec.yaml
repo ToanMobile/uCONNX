@@ -17,6 +17,7 @@ dependencies:
   flutter_svg: ^0.17.4
   shared_preferences: ^0.5.7
   shimmer: ^1.1.1
+  flutter_icons: ^1.1.0
   # This is our modular
   video_player: ^0.10.11
 

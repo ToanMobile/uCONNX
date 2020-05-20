@@ -12,10 +12,12 @@ class _VideoPlayerState extends State<MainPlayer> {
 
   @override
   void initState() {
-    _controller = VideoPlayerController.network('http://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_20mb.mp4')
+    _controller = VideoPlayerController.network('http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4')
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
-        setState(() {});
+        setState(() {
+          _controller.play();
+        });
       });
     _controller.addListener(() {
       if (_controller.value.hasError) {
@@ -39,24 +41,12 @@ class _VideoPlayerState extends State<MainPlayer> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorsUtils.black,
-      body: Center(
-        child: _controller.value.initialized
-            ? AspectRatio(
-                aspectRatio: _controller.value.aspectRatio,
-                child: VideoPlayer(_controller),
-              )
-            : Container(),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            _controller.value.isPlaying ? _controller.pause() : _controller.play();
-          });
-        },
-        child: Icon(
-          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-        ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      body: _controller.value.initialized
+          ? AspectRatio(
+              aspectRatio: _controller.value.aspectRatio,
+              child: VideoPlayer(_controller),
+            )
+          : Container(), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

@@ -8,7 +8,10 @@ import 'package:uCONNX/router_manger.dart';
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIOverlays([]);
-  runApp(App());
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.landscapeRight,
+    DeviceOrientation.landscapeLeft,
+  ]).then((value) => runApp(App()));
 }
 
 class App extends StatelessWidget {
@@ -28,7 +31,7 @@ class App extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
       onGenerateRoute: Router.generateRoute,
-      initialRoute: true ? RouteName.home : RouteName.login,
+      initialRoute: /*SpUtil.getBool(PrefName.isLogin)?? */true ? RouteName.home : RouteName.login,
     );
   }
 }

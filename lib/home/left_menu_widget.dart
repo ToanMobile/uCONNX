@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:shared/shared.dart';
 import 'package:uCONNX/widget/icon_uconnx.dart';
 
@@ -16,13 +17,31 @@ class _LeftMenuState extends State<LeftMenu> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           IconUCONNX(
-            icon: Icons.home,
+            icon: Icons.error,
           ),
           IconUCONNX(
-            icon: Icons.message,
+            icon: FontAwesome.wechat,
           ),
           IconUCONNX(
-            icon: Icons.person,
+            icon: AntDesign.like1,
+          ),
+          IconUCONNX(
+            icon: AntDesign.eye,
+          ),
+          IconUCONNX(
+            icon: AntDesign.shoppingcart,
+          ),
+          IconUCONNX(
+            icon: MaterialCommunityIcons.cast_education,
+          ),
+          IconUCONNX(
+            icon: FontAwesome.money,
+          ),
+          IconUCONNX(
+            icon: Entypo.bug,
+          ),
+          IconUCONNX(
+            icon: MaterialCommunityIcons.heart_pulse,
           ),
         ],
       ),
