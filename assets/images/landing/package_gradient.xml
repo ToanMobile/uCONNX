@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="225"
+        android:endColor="@color/bg_movies"
+        android:startColor="@color/bg_list_movies"
+        android:type="linear" />
+
+    <stroke
+        android:width="2dp"
+        android:color="@color/dialog_edittext_lock" />
+
+    <corners android:radius="@dimen/layout_5dp" />
+</shape>

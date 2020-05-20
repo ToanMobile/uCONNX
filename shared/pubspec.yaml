@@ -1,0 +1,22 @@
+name: shared
+description: A new Flutter package.
+version: 0.0.1
+author:
+homepage:
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^0.5.7+2
+  shimmer: ^1.1.1
+  cached_network_image: ^2.2.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter_intl:
+  enabled: true

@@ -1,0 +1,56 @@
+name: uCONNX
+description: A new Flutter application.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_cupertino_localizations: ^1.0.1
+  cupertino_icons: ^0.1.3
+  flutter_launcher_icons: ^0.7.5
+  #Core
+  flutter_svg: ^0.17.4
+  shared_preferences: ^0.5.7
+  shimmer: ^1.1.1
+  # This is our modular
+  video_player: ^0.10.11
+
+  core:
+    path: core
+  shared:
+    path: shared
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/uconnx_icon.png"
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: iconfont
+      fonts:
+        - asset: assets/fonts/iconfont.ttf
+    - family: calibri
+      fonts:
+        - asset: assets/fonts/calibri_regular.ttf
+
+assets:
+  - assets/icon/
+  - assets/images/
+  - assets/images/landing/
+  - assets/images/listdata/
+  - assets/images/login/
+  - assets/images/parentcontrol/
+  - assets/images/player/
+flutter_intl:
+  enabled: true

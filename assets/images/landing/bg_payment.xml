@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke
+        android:width="@dimen/layout_2dp"
+        android:color="@color/white" />
+    <gradient
+        android:angle="225"
+        android:endColor="@color/bg_movies"
+        android:startColor="@color/bg_list_movies"
+        android:type="linear" />
+</shape>
